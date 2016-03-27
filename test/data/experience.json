@@ -1,0 +1,50 @@
+{
+	"Experience":
+	[
+		{
+			"company": "Company 1",
+			"location": "Toronto, ON",
+			"position": "Software Developer",
+			"startDate": "20012/10",
+            "endDate": "Present",
+			"desc": [
+				"Do stuff",
+				"Write code",
+                "Break builds"
+			]
+		},
+		{
+			"company": "Company 2",
+			"location": "San Francisco, CA",
+			"position": "Hardware Intern",
+			"startDate": "2010/09",
+            "endDate": "2013/12",
+			"desc": [
+				"Prototyping",
+				"Testing"
+			]
+		},
+		{
+			"company": "Company 3",
+			"location": "Boston, MA",
+			"position": "Something intereting",
+			"startDate": "2009/01",
+            "endDate": "2010/04",
+			"desc": [
+				"Did some work",
+				"Words words  words  words  words  words  words  words  words  words "
+			]
+		},
+		{
+			"company": "Company 4",
+			"location": "City, PROV",
+			"position": "Title",
+			"startDate": "2005/05",
+            "endDate": "2007/09",
+			"desc": [
+				" words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words ",
+				" words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+			]
+		}
+	]
+}

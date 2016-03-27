@@ -1,0 +1,102 @@
+@require './_lib/variables_onepage'
+@require './../../src/styles/_lib/responsive'
+
+.onepage
+    margin: auto // this will auto center the content
+    
+    font-family: $base-font-fam
+
+    *
+        line-height: $base-line-height
+        box-sizing: border-box
+        word-wrap: break-word
+
+    .highlight
+        color: $highlight-color
+        font-weight: 700
+    
+    .header, section
+        padding: 10px
+        text-align: left
+        width: 100% // ??
+
+    h1
+        font-family: $title-font-fam
+        font-size: 40em
+        font-weight: 700
+        line-height: 1.1em
+        margin: 0.25em 0
+
+    .contact-card
+        font-size: $base-font-size
+        font-weight: 300
+        color: $primary-color
+        vertical-align: baseline
+        margin: 0.8em 0
+        
+    .header > *
+        padding: 0
+
+    section
+        border-top: 1em solid $border-color
+
+        >*
+            padding: 5px
+            vertical-align: top
+            text-align: left
+
+        h2
+            font-family: $title-font-fam
+            font-size: 18em
+            font-weight: 500
+            color: $secondary-color
+            margin: 0
+        
+    
+        h3, h4
+            margin: 0.1em
+            
+        &.summary ul
+            padding-left: 5px
+    
+        .content
+            font-family: $base-font-fam
+            font-size: $base-font-size
+            font-weight: 400
+            color: $primary-color
+            
+            .keywords
+                font-weight: 500
+                margin: 0.3px 10px 0.4px
+            
+            .company
+                font-weight: 500
+                font-size: 1.1em
+
+            .position, .degree
+                color: $secondary-color
+                font-weight: 500
+                font-size: 1.1em
+                
+            .date
+                text-align: right
+                
+            .desc-list
+                margin: 1em 0
+                
+            [class*="col-"]
+                padding: 0
+    
+@media print
+    .onepage
+        font-size: 1px
+        
+    .row, .entity
+        page-break-inside: avoid
+    li
+        page-break-after: always
+
+@media screen
+    .onepage
+        font-size: 0.5px
+        max-width: unit(8.5*@font-size*$one-in-to-px, 'px') /*  set to A4 portrait paper size so it is printer friendly */    

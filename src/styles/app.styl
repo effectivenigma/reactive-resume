@@ -1,0 +1,49 @@
+
+@require './**/*' // recursive-get sibling directory contents
+
+html, body
+    position: relative
+    height: 100%
+    width: 100%
+    overflow: hidden
+ 
+.page
+    //margin-top: 70px // this is the size of the nav-bar...TODO responsive   
+    
+    .navbar-inverse
+        opacity: .8
+        color: $nav-title-color
+    
+    .content-wrapper
+        position: absolute
+        top: 70px
+        left: 0
+        bottom: 0
+        right: 0
+        overflow: auto
+        
+    .builder, .row
+        height: 100%
+        position: relative
+        
+    .row > .panel
+        height: 100%
+        overflow: auto
+        margin: 0
+        
+    .input-panel, .preview-panel
+        .panel-header
+            display: none
+            opacity: .8
+            background-color: $nav-title-color
+            margin: -15px -30px
+            margin-bottom: 5px
+            border-radius: 2px
+            
+            .glyphicon
+                color: $nav-bg-color
+                margin: 0 10px
+        
+    .preview-panel .panel-header
+        background-color: darken($acc-hover-color, 5%)
+            

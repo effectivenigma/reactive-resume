@@ -1,0 +1,29 @@
+@require '../_lib/variables'
+
+.builder .accordion
+
+    .panel-title
+    .panel-icon
+        display: inline-block
+    
+    .panel-icon
+        line-height: inherit
+        vertical-align: middle
+        float: right
+    
+    .panel-heading
+        transition-property: color
+        transition: .1s   
+        &:hover
+            color: $acc-hover-color
+            
+        &:active
+            color: darken($acc-hover-color, 20%)
+            
+    .panel.expanded
+        .panel-heading
+            color: darken($acc-active-color, 25%)
+            &:hover
+                color: lighten($acc-active-color, 15%)
+            &:active
+                color: darken($acc-active-color, 30%)

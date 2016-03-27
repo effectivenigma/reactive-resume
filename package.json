@@ -1,0 +1,38 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "Templated Resume Generator",
+  "main": "server.js",
+  "keywords": [
+    "expressjs",
+    "reactjs",
+    "nodejs",
+    "stylus",
+    "bootstrap",
+    "gulp",
+    "resume",
+    "json"
+  ],
+  "author": {
+    "name": "Sneha Shah",
+    "email": "effectivenigma@users.noreply.github.com"
+  },
+  "license": "TBD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/effectivenigma/reactive-resume.git"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-stylus": "^2.3.1",
+    "merge": "^1.2.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
