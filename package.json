@@ -1,23 +1,23 @@
 {
-  "name": "spa-react-webpack-ts",
-  "version": "1.0.0",
-  "description": "boilerplate code for a SPA using react, webpack, and typescript",
+  "name": "reactive-resume",
+  "version": "2.0.0",
+  "description": "Resume Generator",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/effectivenigma/reactive-resume.git"
   },
   "keywords": [
-    "demo",
-    "boilerplate",
-    "spa",
-    "single page app",
-    "react",
-    "webpack",
-    "typescript"
+    "resume",
+    "resume maker",
+    "resume generator",
+    "json reader"
   ],
-  "author": "Sneha Shah",
-  "license": "MIT",
+  "author": {
+    "name": "Sneha Shah",
+    "email": "effectivenigmadev@gmail.com"
+  },
+  "license": "Unlicensed",
   "bugs": {
     "url": ""
   },
