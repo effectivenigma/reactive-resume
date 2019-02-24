@@ -1,38 +1,53 @@
 {
-  "name": "resume-builder",
+  "name": "spa-react-webpack-ts",
   "version": "1.0.0",
-  "description": "Templated Resume Generator",
-  "main": "server.js",
-  "keywords": [
-    "expressjs",
-    "reactjs",
-    "nodejs",
-    "stylus",
-    "bootstrap",
-    "gulp",
-    "resume",
-    "json"
-  ],
-  "author": {
-    "name": "Sneha Shah",
-    "email": "effectivenigma@users.noreply.github.com"
-  },
-  "license": "TBD",
+  "description": "boilerplate code for a SPA using react, webpack, and typescript",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/effectivenigma/reactive-resume.git"
+    "url": ""
   },
+  "keywords": [
+    "demo",
+    "boilerplate",
+    "spa",
+    "single page app",
+    "react",
+    "webpack",
+    "typescript"
+  ],
+  "author": "Sneha Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
   "dependencies": {
-    "babel-preset-react": "^6.5.0",
-    "babelify": "^7.2.0",
-    "browser-sync": "^2.11.1",
-    "browserify": "^13.0.0",
-    "express": "^4.13.4",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.0.6",
-    "gulp-stylus": "^2.3.1",
-    "merge": "^1.2.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.27",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-router-dom": "^4.0.4",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
+  },
+  "scripts": {
+    "webpack": "node node_modules/.bin/webpack",
+    "webpack-dev-server": "node node_modules/.bin/webpack-dev-server",
+    "start": "webpack-dev-server --progress --inline --hot --colors",
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "NODE_ENV=production webpack -p --config webpack.prod.js",
+    "build:gh": "webpack -p --config webpack.github.js",
+    "build:clean": "rm -r build/*",
+    "build:clean-gh": "rm -r static/*"
   }
 }

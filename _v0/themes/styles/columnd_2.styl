@@ -1,0 +1,97 @@
+@require './_lib/variables_columnd'
+@require './../../src/styles/_lib/responsive'
+
+.columnd
+    margin: auto // this will auto center the content
+    font-family: $base-font-fam
+    color: $primary-color
+
+    *
+        line-height: $base-line-height
+        box-sizing: border-box
+
+    .highlight
+        color: $highlight-color
+        font-weight: 500
+        
+    .header
+        padding: 5px 0 5px
+        h1
+            font-family: $title-font-fam
+            font-size: 40em
+            text-transform: uppercase
+            margin: 0.1em 0
+            font-weight: 900
+            
+        .contact-card
+            font-size: $base-font-size
+            margin: 0.3em 0
+            padding: 0
+            
+    .section-header
+        h3
+            font-size: 18em
+            font-family: $title-font-fam
+            padding: 5px
+            margin: 0.1em 0
+            color: $secondary-color
+            
+        .horiz-line
+            height: 20em
+            border-bottom: 1px solid $border-color
+            
+    section
+        padding: 5px 10px
+        margin-left: -10px
+        margin-right: -10px
+            
+        .content
+            font-size: $base-font-size
+            padding: 5px
+            
+        .left-col
+            padding: 0
+            text-align: right
+            
+            h4
+                font-size: 1.1em
+                margin: 0.18em
+                
+        .right-col
+            padding-right: 0
+            h5
+                font-size: 1em
+                margin: 0.2em
+            
+        &.skills-summary
+            .summary
+                margin: 0
+                padding-left: 5px
+                padding-right: 0
+            .skills
+                padding-right: 0
+                padding-left: 5px
+                font-size: 0.92em
+            .skill-group
+                font-weight: 500
+            .inline    
+                display: inline
+                
+                
+        &.projects
+            ul
+                margin: 0
+                
+        .experience-item
+            margin: 0 0 0 -15px
+                
+@media print
+    @page
+        margin: auto
+    .columnd
+        font-size: 1px
+
+@media screen
+    .columnd
+        font-size: 0.5px
+        max-width: unit(8.5*@font-size*$one-in-to-px, 'px') /*  set to A4 portrait paper size so it is printer friendly */    

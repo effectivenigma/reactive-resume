@@ -1,0 +1,108 @@
+@require './_lib/variables_columnd'
+@require './../../src/styles/_lib/responsive'
+
+.columnd
+    margin: auto // center content on page
+    color: $primary-color
+    
+    *
+        line-height: $base-line-height
+        box-sizing: border-box
+        margin: 0
+        padding: 0
+        
+    .highlight
+        color: $highlight-color
+                
+    .header
+        padding: 5px
+        h1
+            font-family: $title-font-fam
+            font-size: 40em
+            font-weight: 900
+            text-transform: uppercase
+            margin: 0.1em 0
+            
+        .contact-card
+            font-size: $base-font-size
+            margin: 0.3em 0
+            padding: 0.2em 0
+    
+    section
+        font-size: $base-font-size
+        padding: 5px
+        
+        >*
+            padding: 5px
+            
+        ul
+            padding-left: 2em
+        
+        h3
+            font-size: 1.4em
+            color: $secondary-color
+            font-weight: 700
+            
+        h4
+            font-size: 1.1em
+            /*font-weight: 700 */
+            
+        h5
+            font-size: 1.1em
+            color: lighten($secondary-color, 30%)
+            /*font-weight: 700 */
+            
+        .content
+            padding: 0 5px
+            
+        .left-col
+            text-align: right
+            margin-left: -1.1em
+            
+        .right-col
+            padding-left: 1.3em
+            
+            ul
+                padding-left: 3em
+                margin-top: 0.8em
+            
+        .horiz-line
+            height: 1.1em
+            border-bottom: 1px solid $border-color   
+    
+        .summary
+            padding: 0 1.2em
+            display: inline-block
+            
+        .skills
+            display: inline-block
+            .skill-item > *
+                display: inline
+            .skill-group
+                font-weight: 500
+            /*.keywords
+                font-size: 0.9em*/
+                
+        .experience-item
+            margin-bottom: 1.1em
+            &:last-child
+                margin-bottom: 0  
+                
+        &.projects
+            ul
+                margin-top: 0  
+    
+                
+@media print
+    @page
+        margin-top: 0.5in
+        margin-left: 0.25in
+        margin-right: 0.25in
+        margin-bottom: 0.5in
+    .columnd
+        font-size: 1px
+
+@media screen
+    .columnd
+        font-size: 0.5px
+        max-width: unit(8.5*@font-size*$one-in-to-px, 'px') /*  set to A4 portrait paper size so it is printer friendly */    
