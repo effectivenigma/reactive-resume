@@ -1,0 +1,89 @@
+{
+  "contact": {
+    "name": "first last",
+    "phone": "+1-123-456-7890",
+    "email": "first.last.com",
+    "social": {
+      "website": "firstlast.com",
+      "linkedin": "linkedin.com/firstlast",
+      "twitter": "twitter.com/firstlast",
+      "instagram": "instagram.com/firstlast",
+      "github": "github.com/firstlast",
+      "gitlab": "gitlab.com/firstlast"
+    }
+  },
+  "summary": [
+    "item1",
+    "item2",
+    "item3"
+  ],
+  "skills": {
+    "group1": [
+      "item1-1",
+      "item1-2",
+      "item1-3"
+    ],
+    "group2": [
+      "item2-1",
+      "item2-2",
+      "item2-3"
+    ]
+  },
+  "experience": [
+    {
+      "organization": "abc123",
+      "location": "city, state, country",
+      "tenure": {
+        "start": "yyyy/mm/dd",
+        "end": "yyyy/mm/dd"
+      },
+      "roles": [
+        {
+          "position": "job title 1",
+          "duration": {
+            "start": "yyyy/mm/dd",
+            "end": "yyyy/mm/dd"
+          },
+          "highlights": [
+            "item1",
+            "item2",
+            "item3"
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "proj name",
+      "organization": "group or org name",
+      "duration": {
+        "start": "yyyy/mm/dd",
+        "end": "yyyy/mm/dd"
+      },
+      "contributions": [
+        "item1",
+        "item2",
+        "item3"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Blah",
+      "location": "city, state, country",
+      "major": "Bachelor of Blah",
+      "minor": "Economics",
+      "duration": {
+        "start": "yyyy/mm/dd",
+        "end": "yyyy/mm/dd"
+      },
+      "description": "",
+      "highlights": [
+        "item1",
+        "item2",
+        "item3"
+      ]
+    }
+  ]
+}

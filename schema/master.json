@@ -1,0 +1,546 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "contact",
+    "summary",
+    "skills",
+    "experience",
+    "projects",
+    "education"
+  ],
+  "properties": {
+    "contact": {
+      "$id": "#/properties/contact",
+      "type": "object",
+      "title": "The Contact Schema",
+      "required": [
+        "name",
+        "phone",
+        "email",
+        "social"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/contact/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "first last"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "phone": {
+          "$id": "#/properties/contact/properties/phone",
+          "type": "string",
+          "title": "The Phone Schema",
+          "default": "",
+          "examples": [
+            "+1-123-456-7890"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "email": {
+          "$id": "#/properties/contact/properties/email",
+          "type": "string",
+          "title": "The Email Schema",
+          "default": "",
+          "examples": [
+            "first.last.com"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "social": {
+          "$id": "#/properties/contact/properties/social",
+          "type": "object",
+          "title": "The Social Schema",
+          "required": [
+            "website",
+            "linkedin",
+            "twitter",
+            "instagram",
+            "github",
+            "gitlab"
+          ],
+          "properties": {
+            "website": {
+              "$id": "#/properties/contact/properties/social/properties/website",
+              "type": "string",
+              "title": "The Website Schema",
+              "default": "",
+              "examples": [
+                "firstlast.com"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "linkedin": {
+              "$id": "#/properties/contact/properties/social/properties/linkedin",
+              "type": "string",
+              "title": "The Linkedin Schema",
+              "default": "",
+              "examples": [
+                "linkedin.com/firstlast"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "twitter": {
+              "$id": "#/properties/contact/properties/social/properties/twitter",
+              "type": "string",
+              "title": "The Twitter Schema",
+              "default": "",
+              "examples": [
+                "twitter.com/firstlast"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "instagram": {
+              "$id": "#/properties/contact/properties/social/properties/instagram",
+              "type": "string",
+              "title": "The Instagram Schema",
+              "default": "",
+              "examples": [
+                "instagram.com/firstlast"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "github": {
+              "$id": "#/properties/contact/properties/social/properties/github",
+              "type": "string",
+              "title": "The Github Schema",
+              "default": "",
+              "examples": [
+                "github.com/firstlast"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "gitlab": {
+              "$id": "#/properties/contact/properties/social/properties/gitlab",
+              "type": "string",
+              "title": "The Gitlab Schema",
+              "default": "",
+              "examples": [
+                "gitlab.com/firstlast"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "$id": "#/properties/summary",
+      "type": "array",
+      "title": "The Summary Schema",
+      "items": {
+        "$id": "#/properties/summary/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "item1",
+          "item2",
+          "item3"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "skills": {
+      "$id": "#/properties/skills",
+      "type": "object",
+      "title": "The Skills Schema",
+      "required": [
+        "group1",
+        "group2"
+      ],
+      "properties": {
+        "group1": {
+          "$id": "#/properties/skills/properties/group1",
+          "type": "array",
+          "title": "The Group1 Schema",
+          "items": {
+            "$id": "#/properties/skills/properties/group1/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "item1-1",
+              "item1-2",
+              "item1-3"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "group2": {
+          "$id": "#/properties/skills/properties/group2",
+          "type": "array",
+          "title": "The Group2 Schema",
+          "items": {
+            "$id": "#/properties/skills/properties/group2/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "item2-1",
+              "item2-2",
+              "item2-3"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "experience": {
+      "$id": "#/properties/experience",
+      "type": "array",
+      "title": "The Experience Schema",
+      "items": {
+        "$id": "#/properties/experience/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "organization",
+          "location",
+          "tenure",
+          "roles"
+        ],
+        "properties": {
+          "organization": {
+            "$id": "#/properties/experience/items/properties/organization",
+            "type": "string",
+            "title": "The Organization Schema",
+            "default": "",
+            "examples": [
+              "abc123"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "location": {
+            "$id": "#/properties/experience/items/properties/location",
+            "type": "string",
+            "title": "The Location Schema",
+            "default": "",
+            "examples": [
+              "city, state, country"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "tenure": {
+            "$id": "#/properties/experience/items/properties/tenure",
+            "type": "object",
+            "title": "The Tenure Schema",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "$id": "#/properties/experience/items/properties/tenure/properties/start",
+                "type": "string",
+                "title": "The Start Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "end": {
+                "$id": "#/properties/experience/items/properties/tenure/properties/end",
+                "type": "string",
+                "title": "The End Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "roles": {
+            "$id": "#/properties/experience/items/properties/roles",
+            "type": "array",
+            "title": "The Roles Schema",
+            "items": {
+              "$id": "#/properties/experience/items/properties/roles/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "position",
+                "duration",
+                "highlights"
+              ],
+              "properties": {
+                "position": {
+                  "$id": "#/properties/experience/items/properties/roles/items/properties/position",
+                  "type": "string",
+                  "title": "The Position Schema",
+                  "default": "",
+                  "examples": [
+                    "job title 1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "duration": {
+                  "$id": "#/properties/experience/items/properties/roles/items/properties/duration",
+                  "type": "object",
+                  "title": "The Duration Schema",
+                  "required": [
+                    "start",
+                    "end"
+                  ],
+                  "properties": {
+                    "start": {
+                      "$id": "#/properties/experience/items/properties/roles/items/properties/duration/properties/start",
+                      "type": "string",
+                      "title": "The Start Schema",
+                      "default": "",
+                      "examples": [
+                        "yyyy/mm/dd"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "end": {
+                      "$id": "#/properties/experience/items/properties/roles/items/properties/duration/properties/end",
+                      "type": "string",
+                      "title": "The End Schema",
+                      "default": "",
+                      "examples": [
+                        "yyyy/mm/dd"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                },
+                "highlights": {
+                  "$id": "#/properties/experience/items/properties/roles/items/properties/highlights",
+                  "type": "array",
+                  "title": "The Highlights Schema",
+                  "items": {
+                    "$id": "#/properties/experience/items/properties/roles/items/properties/highlights/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "default": "",
+                    "examples": [
+                      "item1",
+                      "item2",
+                      "item3"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "projects": {
+      "$id": "#/properties/projects",
+      "type": "array",
+      "title": "The Projects Schema",
+      "items": {
+        "$id": "#/properties/projects/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "name",
+          "organization",
+          "duration",
+          "contributions"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/projects/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "proj name"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "organization": {
+            "$id": "#/properties/projects/items/properties/organization",
+            "type": "string",
+            "title": "The Organization Schema",
+            "default": "",
+            "examples": [
+              "group or org name"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "duration": {
+            "$id": "#/properties/projects/items/properties/duration",
+            "type": "object",
+            "title": "The Duration Schema",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "$id": "#/properties/projects/items/properties/duration/properties/start",
+                "type": "string",
+                "title": "The Start Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "end": {
+                "$id": "#/properties/projects/items/properties/duration/properties/end",
+                "type": "string",
+                "title": "The End Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "contributions": {
+            "$id": "#/properties/projects/items/properties/contributions",
+            "type": "array",
+            "title": "The Contributions Schema",
+            "items": {
+              "$id": "#/properties/projects/items/properties/contributions/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "item1",
+                "item2",
+                "item3"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "$id": "#/properties/education",
+      "type": "array",
+      "title": "The Education Schema",
+      "items": {
+        "$id": "#/properties/education/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "institution",
+          "location",
+          "major",
+          "minor",
+          "duration",
+          "description",
+          "highlights"
+        ],
+        "properties": {
+          "institution": {
+            "$id": "#/properties/education/items/properties/institution",
+            "type": "string",
+            "title": "The Institution Schema",
+            "default": "",
+            "examples": [
+              "University of Blah"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "location": {
+            "$id": "#/properties/education/items/properties/location",
+            "type": "string",
+            "title": "The Location Schema",
+            "default": "",
+            "examples": [
+              "city, state, country"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "major": {
+            "$id": "#/properties/education/items/properties/major",
+            "type": "string",
+            "title": "The Major Schema",
+            "default": "",
+            "examples": [
+              "Bachelor of Blah"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "minor": {
+            "$id": "#/properties/education/items/properties/minor",
+            "type": "string",
+            "title": "The Minor Schema",
+            "default": "",
+            "examples": [
+              "Economics"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "duration": {
+            "$id": "#/properties/education/items/properties/duration",
+            "type": "object",
+            "title": "The Duration Schema",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "$id": "#/properties/education/items/properties/duration/properties/start",
+                "type": "string",
+                "title": "The Start Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "end": {
+                "$id": "#/properties/education/items/properties/duration/properties/end",
+                "type": "string",
+                "title": "The End Schema",
+                "default": "",
+                "examples": [
+                  "yyyy/mm/dd"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "description": {
+            "$id": "#/properties/education/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "highlights": {
+            "$id": "#/properties/education/items/properties/highlights",
+            "type": "array",
+            "title": "The Highlights Schema",
+            "items": {
+              "$id": "#/properties/education/items/properties/highlights/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "item1",
+                "item2",
+                "item3"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}
