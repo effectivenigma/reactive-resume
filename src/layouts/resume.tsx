@@ -1,5 +1,7 @@
 import React from "react";
 import { Contact } from "./resume/contact";
+import { Summary } from "./resume/summary";
+import { Skills } from "./resume/skills";
 
 interface IResume {
   data: IResumeData;
@@ -13,10 +15,27 @@ export class Resume extends React.Component<IResume, IResume> {
   }
 
   render(): JSX.Element {
-    let theme = Object.assign({}, this.state.theme.palette, this.state.theme.typography); // not compatible with IE
+    let {
+      name: themeName,
+      palette,
+      typography
+    } = this.state.theme;
+    let baseStyle = Object.assign({}, palette, typography); // not compatible with IE
+
+    let {
+      contact,
+      summary,
+      skills,
+      experience,
+      projects,
+      education
+    } = this.state.data;
+
     return (
-      <article style={theme} className={this.state.theme.name}>
-        <Contact data={this.state.data.contact} />
+      <article style={baseStyle} className={themeName}>
+        {contact ? <Contact data={contact} /> : ""}
+        {summary && summary.length ? <Summary data={summary} /> : ""}
+        {skills ? <Skills data={skills} /> : ""}
       </article>
     );
   }
