@@ -7,6 +7,9 @@ import { Skills } from "./resume/skills";
 import { Education } from "./resume/education";
 import { Experience } from "./resume/experience";
 
+// import CSS so it gets injected inline
+import * as DefaultTheme from "../themes/default.css";
+
 interface IResume {
   data: IResumeData;
   theme: ITheme;

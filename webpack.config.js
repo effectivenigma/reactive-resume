@@ -16,6 +16,12 @@ var commonConfig = {
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
+    // alias: {
+    //   components: path.resolve(__dirname, 'src/components'),
+    //   layouts: path.resolve(__dirname, 'src/layouts'),
+    //   themes: path.resolve(__dirname, 'src/themes'),
+    //   schema: path.resolve(__dirname, 'schema')
+    // }
   },
 
   module: {
@@ -31,6 +37,12 @@ var commonConfig = {
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader",
+        exclude: /node_modules/
+      },
+      // css
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
         exclude: /node_modules/
       }
     ]
