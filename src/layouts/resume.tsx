@@ -1,11 +1,15 @@
+/// <reference path="../../@types/ITheme.d.ts" />
+
 import React from "react";
 import { Contact } from "./resume/contact";
 import { Summary } from "./resume/summary";
 import { Skills } from "./resume/skills";
+import { Education } from "./resume/education";
+import { Experience } from "./resume/experience";
 
 interface IResume {
   data: IResumeData;
-  theme: ITheme
+  theme: ITheme;
 }
 
 export class Resume extends React.Component<IResume, IResume> {
@@ -36,6 +40,8 @@ export class Resume extends React.Component<IResume, IResume> {
         {contact ? <Contact data={contact} /> : ""}
         {summary && summary.length ? <Summary data={summary} /> : ""}
         {skills ? <Skills data={skills} /> : ""}
+        {experience ? <Experience data={experience} /> : ""}
+        {education ? <Education data={education} /> : ""}
       </article>
     );
   }
