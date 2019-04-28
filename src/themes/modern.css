@@ -1,0 +1,71 @@
+.modern {
+  --accent-color: rgba(240, 181, 6, 0.941);
+  --primary-color: #333;
+  --secondary-color: #656565;
+  --primary-font: 'Roboto',sans-serif;
+  --secondary-font: 'Raleway',sans-serif;
+}
+
+.modern h1 {
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modern h1+header {
+  display: inline-block;
+  width: 80%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.modern h3 {
+  width: 100%;
+  position: relative;
+}
+
+.modern h3::after {
+    content: "";
+    height: 1px;
+    width: 75%;
+
+    border-top: 1px solid var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.modern h4,
+.modern h4+span {
+  display: inline-block;
+  margin: 0;
+}
+
+.modern h4 {
+  width: 70%;
+}
+
+.modern h4+span {
+  width: 30%;
+}
+
+.modern mark,
+.modern mark+span {
+  display: block;
+}
+
+.modern .experience > div > header,
+.modern .education > div > header {
+  width: 20%;
+  margin-right: 5%;
+  display: inline-block;
+  float: left;
+  text-align: right;
+}
+
+.modern .experience > div > div,
+.modern .education > div > div {
+  width: 75%;
+  display: inline-block;
+}

@@ -1,9 +1,13 @@
 export function DefaultTheme() {
   let styles: ITheme = {
-    name: "default",
-    palette: null,
+    name: "modern",
+    palette: {
+      "--accent-color": "#333",
+      "--primary-color": "#454545",
+      "--secondary-color": "#656565"
+    },
     typography: {
-      fontSize: "14px",
+      /*fontSize: "14px",*/
       fontFamily: "sans-serif"
     }
   };

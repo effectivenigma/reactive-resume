@@ -8,7 +8,9 @@ import { Education } from "./resume/education";
 import { Experience } from "./resume/experience";
 
 // import CSS so it gets injected inline
+import * as BaseCss from "../themes/base.css";
 import * as DefaultTheme from "../themes/default.css";
+import * as ModernTheme from "../themes/modern.css";
 
 interface IResume {
   data: IResumeData;
@@ -27,7 +29,7 @@ export class Resume extends React.Component<IResume, IResume> {
       palette,
       typography
     } = this.state.theme;
-    let baseStyle = Object.assign({}, palette, typography); // not compatible with IE
+    let baseStyle = {}; //Object.assign({}, palette, typography); // not compatible with IE
 
     let {
       contact,

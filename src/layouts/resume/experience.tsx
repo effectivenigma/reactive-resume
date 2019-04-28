@@ -33,9 +33,12 @@ export class Experience extends React.Component<IExperience, IExperience> {
             <div key={ridx}>
               <header>
                 <h4>{r.position}</h4>
-                <span>
-                  <time>{r.duration.start}</time> - <time>{r.duration.end}</time>
-                </span>
+                {item.roles.length > 1 ?
+                  <span>
+                    <time>{r.duration.start}</time> - <time>{r.duration.end}</time>
+                  </span>
+                : ""
+                }
               </header>
               <ul>
                 {highlights}
@@ -46,11 +49,13 @@ export class Experience extends React.Component<IExperience, IExperience> {
 
         itemBlocks.push(
           <div key={idx}>
-            <mark>{item.organization}</mark>
-            <span>{item.location}</span>
-            {/* <span>
-              <time>{item.tenure.start}</time> - <time>{item.tenure.end}</time>
-            </span> */}
+            <header>
+              <mark>{item.organization}</mark>
+              <span>{item.location}</span>
+              <span>
+                <time>{item.tenure.start}</time> - <time>{item.tenure.end}</time>
+              </span>
+            </header>
             {roles}
           </div>
         );

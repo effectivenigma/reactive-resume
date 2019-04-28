@@ -1,4 +1,17 @@
-.default mark {
-  background-color: transparent;
-  color: steelblue;
+.default {
+  --accent-color: #333;
+  --primary-color: #454545;
+  --secondary-color: #656565;
+  --primary-font: sans-serif;
+  --secondary-font: sans-serif;
+}
+
+.default section.profile {
+  text-align: center;
+}
+
+.default .experience header > h4,
+.default .experience header > span {
+  display: inline-block;
+  width: 50%;
 }

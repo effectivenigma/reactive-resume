@@ -23,11 +23,14 @@ export class Contact extends React.Component<IContact, IContact> {
     } = this.state.data;
 
     return (
-      <section className="contact">
+      <section className="profile">
         <h1>{name}</h1>
-        <div>{email}</div>
-        {phone ? <div>{phone}</div> : ""}
-        {social ? (
+        <header>
+          <div className="contact">
+            <div>{email}</div>
+            {phone ? <div>{phone}</div> : ""}
+          </div>
+          {social ? (
           <div className="social">
             {social.website ? <div>{social.website}</div> : ""}
             {social.linkedin ? <div>{social.linkedin}</div> : ""}
@@ -37,6 +40,7 @@ export class Contact extends React.Component<IContact, IContact> {
             {social.instagram ? <div>{social.instagram}</div> : ""}
           </div>
         ) : ""}
+        </header>
       </section>
     );
   }

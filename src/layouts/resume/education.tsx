@@ -27,16 +27,18 @@ export class Education extends React.Component<IEducation, IEducation> {
         itemBlocks.push(
           <div key={idx}>
             <header>
-              <h4>{item.major}</h4>
               <mark>{item.institution}</mark>
               <span>{item.location}</span>
               <span>
                 <time>{item.duration.start}</time> - <time>{item.duration.end}</time>
               </span>
             </header>
-            <ul>
-              {highlights}
-            </ul>
+            <div>
+              <h4>{item.major}</h4>
+              <ul>
+                {highlights}
+              </ul>
+            </div>
           </div>
         );
       });
