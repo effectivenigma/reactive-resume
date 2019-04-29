@@ -1,21 +1,24 @@
 .modern {
   --accent-color: rgba(240, 181, 6, 0.941);
-  --primary-color: #333;
-  --secondary-color: #656565;
+  --primary-color: #555;
+  --secondary-color: #858585;
+  --border-color: #ccc;
   --primary-font: 'Roboto',sans-serif;
   --secondary-font: 'Raleway',sans-serif;
 }
 
 .modern h1 {
   display: inline-block;
-  width: 20%;
+  width: 40%;
   text-align: left;
   vertical-align: middle;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
-.modern h1+header {
+.modern h1+address {
   display: inline-block;
-  width: 80%;
+  width: 60%;
   text-align: right;
   vertical-align: middle;
 }
@@ -30,7 +33,7 @@
     height: 1px;
     width: 75%;
 
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--border-color);
     position: absolute;
     top: 50%;
     left: 25%;
@@ -68,4 +71,9 @@
 .modern .education > div > div {
   width: 75%;
   display: inline-block;
+}
+
+.modern .experience > div > div:not(:first-of-type),
+.modern .education > div > div:not(:first-of-type) {
+  margin-left: 25%;
 }

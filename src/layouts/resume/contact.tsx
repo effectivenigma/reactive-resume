@@ -25,22 +25,22 @@ export class Contact extends React.Component<IContact, IContact> {
     return (
       <section className="profile">
         <h1>{name}</h1>
-        <header>
+        <address>
           <div className="contact">
-            <div>{email}</div>
-            {phone ? <div>{phone}</div> : ""}
+            <a href={"mailto:" + email}>{email}</a>
+            {phone ? <a href={"tel:" + phone}>{phone}</a> : ""}
           </div>
           {social ? (
           <div className="social">
-            {social.website ? <div>{social.website}</div> : ""}
-            {social.linkedin ? <div>{social.linkedin}</div> : ""}
-            {social.github ? <div>{social.github}</div> : ""}
-            {social.gitlab ? <div>{social.gitlab}</div> : ""}
-            {social.twitter ? <div>{social.twitter}</div> : ""}
-            {social.instagram ? <div>{social.instagram}</div> : ""}
+            {social.website ? <a href={social.website}>{social.website}</a> : ""}
+            {social.linkedin ? <a href={social.linkedin}>{social.linkedin}</a> : ""}
+            {social.github ? <a href={social.github}>{social.github}</a> : ""}
+            {social.gitlab ? <a href={social.gitlab}>{social.gitlab}</a> : ""}
+            {social.twitter ? <a href={social.twitter}>{social.twitter}</a> : ""}
+            {social.instagram ? <a href={social.instagram}>{social.instagram}</a> : ""}
           </div>
         ) : ""}
-        </header>
+        </address>
       </section>
     );
   }
