@@ -1,6 +1,7 @@
 /// <reference path="../../../@types/IResumeData.d.ts" />
 
 import React from "react";
+import dateformatter from "../../utils/date-formatter";
 
 interface IEducation {
   data: Array<IEducationData>;
@@ -30,7 +31,7 @@ export class Education extends React.Component<IEducation, IEducation> {
               <mark>{item.institution}</mark>
               <span>{item.location}</span>
               <span>
-                <time>{item.duration.start}</time> - <time>{item.duration.end}</time>
+                <time>{dateformatter.toMMMdd(item.duration.start)}</time> - <time>{dateformatter.toMMMdd(item.duration.end)}</time>
               </span>
             </header>
             <div>

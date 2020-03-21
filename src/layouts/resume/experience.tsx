@@ -1,6 +1,7 @@
 /// <reference path="../../../@types/IResumeData.d.ts" />
 
 import React from "react";
+import dateformatter from "../../utils/date-formatter";
 
 interface IExperience {
   data: Array<IExperienceData>;
@@ -35,7 +36,7 @@ export class Experience extends React.Component<IExperience, IExperience> {
                 <h4>{r.position}</h4>
                 {item.roles.length > 1 ?
                   <span>
-                    <time>{r.duration.start}</time> - <time>{r.duration.end}</time>
+                    <time>{dateformatter.toMMMdd(r.duration.start)}</time> - <time>{dateformatter.toMMMdd(r.duration.end)}</time>
                   </span>
                 : ""
                 }
@@ -53,7 +54,7 @@ export class Experience extends React.Component<IExperience, IExperience> {
               <mark>{item.organization}</mark>
               <span>{item.location}</span>
               <span>
-                <time>{item.tenure.start}</time> - <time>{item.tenure.end}</time>
+                <time>{dateformatter.toMMMdd(item.tenure.start)}</time> - <time>{dateformatter.toMMMdd(item.tenure.end)}</time>
               </span>
             </header>
             {roles}

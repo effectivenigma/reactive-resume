@@ -22,6 +22,8 @@ export class Contact extends React.Component<IContact, IContact> {
       social
     } = this.state.data;
 
+    let wprefix = "https://www.";
+
     return (
       <section className="profile">
         <h1>{name}</h1>
@@ -32,12 +34,12 @@ export class Contact extends React.Component<IContact, IContact> {
           </div>
           {social ? (
           <div className="social">
-            {social.website ? <a href={social.website}>{social.website}</a> : ""}
-            {social.linkedin ? <a href={social.linkedin}>{social.linkedin}</a> : ""}
-            {social.github ? <a href={social.github}>{social.github}</a> : ""}
-            {social.gitlab ? <a href={social.gitlab}>{social.gitlab}</a> : ""}
-            {social.twitter ? <a href={social.twitter}>{social.twitter}</a> : ""}
-            {social.instagram ? <a href={social.instagram}>{social.instagram}</a> : ""}
+            {social.website ? <a href={wprefix + social.website} target="_blank">{social.website}</a> : ""}
+            {social.linkedin ? <a href={wprefix + social.linkedin} target="_blank">{social.linkedin}</a> : ""}
+            {social.github ? <a href={wprefix + social.github} target="_blank">{social.github}</a> : ""}
+            {social.gitlab ? <a href={wprefix + social.gitlab} target="_blank">{social.gitlab}</a> : ""}
+            {social.twitter ? <a href={wprefix + social.twitter} target="_blank">{social.twitter}</a> : ""}
+            {social.instagram ? <a href={wprefix + social.instagram} target="_blank">{social.instagram}</a> : ""}
           </div>
         ) : ""}
         </address>

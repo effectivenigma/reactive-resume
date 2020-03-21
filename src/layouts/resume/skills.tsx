@@ -26,7 +26,7 @@ export class Skills extends React.Component<ISkills, ISkills> {
           itemNodes.push(
             <li key={idx}>
               <span className="group">{`${key}: `}</span>
-              <span>{str}</span>
+              <span>{str.join(", ")}</span>
             </li>
           );
         }
